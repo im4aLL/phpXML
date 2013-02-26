@@ -6,6 +6,7 @@ Export and import mysql data/array into XML (File format Microsoft Excel XML 200
 
 Export
 ======
+<pre>
 mysql_connect("localhost","root","");
 mysql_select_db("cdcol");
 
@@ -21,3 +22,4 @@ $XML = new phpXML();
 $XML->dataAry = $data;
 $XML->generateXML();
 echo $XML->getXML();
+</pre>
