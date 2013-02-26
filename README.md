@@ -4,13 +4,12 @@ phpXML
 Export and import mysql data/array into XML (File format Microsoft Excel XML 2003)
 
 
-<<<<<<< HEAD
 <h3>Export</h3>
-<hr>
+
 =======
 Export
 ======
->>>>>>> 20fd3e7d6f35534c9fd19fe32ee2b87d0a4ab02b
+
 <pre>
 mysql_connect("localhost","root","");
 mysql_select_db("cdcol");
@@ -28,7 +27,7 @@ $XML->dataAry = $data;
 $XML->generateXML();
 echo $XML->getXML();
 </pre>
-<<<<<<< HEAD
+
 
 <h3>Enable download</h3>
 
@@ -86,4 +85,3 @@ if(isset($_POST['submit']) && isset($_FILES['file']['name'])!=NULL){
 }
 </pre>
 =======
->>>>>>> 20fd3e7d6f35534c9fd19fe32ee2b87d0a4ab02b
