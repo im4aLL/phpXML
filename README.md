@@ -50,9 +50,7 @@ $XML->xmlFilePath = './';
 $XML->xmlFileUploadType = 'local';
 $XML->readXML();
 
-echo '<pre>';
 print_r($XML->getXMLObject());
-echo '</pre>';
 </pre>
 
 
@@ -64,11 +62,7 @@ echo '</pre>';
     <button type="submit" name="submit">Read This XML Excel</button>
 </form>
 
-echo '<pre>';
 print_r($_FILES);
-echo '</pre>';
-
-echo '<hr>';
 
 if(isset($_POST['submit']) && isset($_FILES['file']['name'])!=NULL){
 	
@@ -78,9 +72,7 @@ if(isset($_POST['submit']) && isset($_FILES['file']['name'])!=NULL){
 	$XML->xmlFileUploadType = 'fly';
 	$XML->xmlFileName = $_FILES['file'];
 	$XML->readXML();
-	echo '<pre>';
 	print_r($XML->getXMLObject());
-	echo '</pre>';
 	
 }
 </pre>
