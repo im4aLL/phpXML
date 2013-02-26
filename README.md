@@ -6,10 +6,6 @@ Export and import mysql data/array into XML (File format Microsoft Excel XML 200
 
 <h3>Export</h3>
 
-=======
-Export
-======
-
 <pre>
 mysql_connect("localhost","root","");
 mysql_select_db("cdcol");
