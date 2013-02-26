@@ -31,13 +31,13 @@ echo $XML->getXML();
 
 <h3>Enable download</h3>
 
-<p>Add this two line instead of <pre>header( "content-type: text/xml" );</pre></p>
-
+<p>Add this two line </p>
 <pre>
 header('Content-disposition: attachment; filename="newfile.xml"');
 header('Content-type: "text/xml"; charset="utf8"');
 </pre>
 
+<p>instead of <pre>header( "content-type: text/xml" );</pre></p>
 
 <h3>Local XML EXCEL reading</h3>
 
@@ -57,22 +57,22 @@ print_r($XML->getXMLObject());
 <h3>Read uploaded XML</h3>
 
 <pre>
-<form action="" method="post" enctype="multipart/form-data">
-	<input type="file" name="file" />
-    <button type="submit" name="submit">Read This XML Excel</button>
-</form>
+&lt;form action=&quot;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;
+	&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;
+    &lt;button type=&quot;submit&quot; name=&quot;submit&quot;&gt;Read This XML Excel&lt;/button&gt;
+&lt;/form&gt;
 
 print_r($_FILES);
 
-if(isset($_POST['submit']) && isset($_FILES['file']['name'])!=NULL){
+if(isset($_POST['submit']) &amp;&amp; isset($_FILES['file']['name'])!=NULL){
 	
 	require_once('phpXML.class.php');
 	
 	$XML = new phpXML();
-	$XML->xmlFileUploadType = 'fly';
-	$XML->xmlFileName = $_FILES['file'];
-	$XML->readXML();
-	print_r($XML->getXMLObject());
+	$XML-&gt;xmlFileUploadType = 'fly';
+	$XML-&gt;xmlFileName = $_FILES['file'];
+	$XML-&gt;readXML();
+	print_r($XML-&gt;getXMLObject());
 	
 }
 </pre>
